@@ -1,0 +1,58 @@
+Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozNzg3MH0sImlhdCI6MTc2NjE1NjUzNSwiZXhwIjoxNzcxMzQwNTM1fQ.Cs9H32MfqJQR-SKKyuToRKYNWZ_WAvfeVM4HZcjdtYU
+{
+  article: {
+    slug: 'Test-Title1-37870',
+    title: 'Test Title1',
+    description: 'Test Des1',
+    body: 'Test Body1',
+    tagList: [ 'test1' ],
+    createdAt: '2025-12-19T15:02:15.760Z',
+    updatedAt: '2025-12-19T15:02:15.760Z',
+    favorited: false,
+    favoritesCount: 0,
+    author: {
+      username: 'asrivastava82',
+      bio: null,
+      image: 'https://conduit-api.bondaracademy.com/images/smiley-cyrus.jpeg',
+      following: false
+    }
+  }
+}
+{
+  article: {
+    slug: 'Test-Title1-37870',
+    title: 'Test Title1',
+    description: 'Test Des1',
+    body: 'Test Body1',
+    tagList: [ 'test1' ],
+    createdAt: '2025-12-19T15:02:15.760Z',
+    updatedAt: '2025-12-19T15:02:15.760Z',
+    favorited: false,
+    favoritesCount: 0,
+    author: {
+      username: 'asrivastava82',
+      bio: null,
+      image: 'https://conduit-api.bondaracademy.com/images/smiley-cyrus.jpeg',
+      following: false
+    }
+  }
+}
+{
+  article: {
+    slug: 'Test-Title2-37870',
+    title: 'Test Title2',
+    description: 'Test Des2',
+    body: 'Test Body2',
+    tagList: [ 'test2' ],
+    createdAt: '2025-12-19T15:02:15.760Z',
+    updatedAt: '2025-12-19T15:02:16.730Z',
+    favorited: false,
+    favoritesCount: 0,
+    author: {
+      username: 'asrivastava82',
+      bio: null,
+      image: 'https://conduit-api.bondaracademy.com/images/smiley-cyrus.jpeg',
+      following: false
+    }
+  }
+}

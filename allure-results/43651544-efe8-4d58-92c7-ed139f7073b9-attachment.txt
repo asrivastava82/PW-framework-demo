@@ -1,0 +1,10 @@
+info Navigating to the page: https://parabank.parasoft.com/
+info Clicking element: getByRole('link', { name: 'Open New Account' })
+info Clicking element: getByRole('button', { name: 'Open New Account' })
+info Clicking element: getByRole('link', { name: 'Accounts Overview' })
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 9833,
+  [Symbol(trigger_async_id_symbol)]: 9416,
+  [Symbol(kResourceStore)]: undefined
+}

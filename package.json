@@ -1,0 +1,26 @@
+{
+  "name": "softbank_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_login": "cross-env $env:TEST_ENV='qa'; npx playwright test loginPage.spec.ts --project=chromium --headed",
+    "test_openAccount": "cross-env $env:TEST_ENV='qa'; npx playwright test openNewAccount.spec.ts --project=chromium --headed",
+    "test_accountOverview": "cross-env $env:TEST_ENV='qa'; npx playwright test accountsOverview.spec.ts --project=chromium --headed",
+    "test_registration": "npx cross-env SKIP_GLOBAL_SETUP=true npx playwright test tests/ui/userRegistration.spec.ts -g 'verify the User Regristration' --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^25.0.1",
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.3",
+    "cross-env": "^10.1.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3"
+  }
+}

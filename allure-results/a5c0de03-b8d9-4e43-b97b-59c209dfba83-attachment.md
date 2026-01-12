@@ -1,0 +1,168 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link:
+        - /url: admin.htm
+        - img [ref=e4] [cursor=pointer]
+      - link "ParaBank":
+        - /url: index.htm
+        - img "ParaBank" [ref=e5] [cursor=pointer]
+      - paragraph [ref=e6]: Experience the difference
+    - generic [ref=e7]:
+      - list [ref=e8]:
+        - listitem [ref=e9]: Solutions
+        - listitem [ref=e10]:
+          - link "About Us" [ref=e11] [cursor=pointer]:
+            - /url: about.htm
+        - listitem [ref=e12]:
+          - link "Services" [ref=e13] [cursor=pointer]:
+            - /url: services.htm
+        - listitem [ref=e14]:
+          - link "Products" [ref=e15] [cursor=pointer]:
+            - /url: http://www.parasoft.com/jsp/products.jsp
+        - listitem [ref=e16]:
+          - link "Locations" [ref=e17] [cursor=pointer]:
+            - /url: http://www.parasoft.com/jsp/pr/contacts.jsp
+        - listitem [ref=e18]:
+          - link "Admin Page" [ref=e19] [cursor=pointer]:
+            - /url: admin.htm
+      - list [ref=e20]:
+        - listitem [ref=e21]:
+          - link "home" [ref=e22] [cursor=pointer]:
+            - /url: index.htm
+        - listitem [ref=e23]:
+          - link "about" [ref=e24] [cursor=pointer]:
+            - /url: about.htm
+        - listitem [ref=e25]:
+          - link "contact" [ref=e26] [cursor=pointer]:
+            - /url: contact.htm
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: Welcome Abhishek Srivastava
+        - heading "Account Services" [level=2] [ref=e30]
+        - list [ref=e31]:
+          - listitem [ref=e32]:
+            - link "Open New Account" [ref=e33] [cursor=pointer]:
+              - /url: openaccount.htm
+          - listitem [ref=e34]:
+            - link "Accounts Overview" [ref=e35] [cursor=pointer]:
+              - /url: overview.htm
+          - listitem [ref=e36]:
+            - link "Transfer Funds" [ref=e37] [cursor=pointer]:
+              - /url: transfer.htm
+          - listitem [ref=e38]:
+            - link "Bill Pay" [ref=e39] [cursor=pointer]:
+              - /url: billpay.htm
+          - listitem [ref=e40]:
+            - link "Find Transactions" [ref=e41] [cursor=pointer]:
+              - /url: findtrans.htm
+          - listitem [ref=e42]:
+            - link "Update Contact Info" [ref=e43] [cursor=pointer]:
+              - /url: updateprofile.htm
+          - listitem [ref=e44]:
+            - link "Request Loan" [ref=e45] [cursor=pointer]:
+              - /url: requestloan.htm
+          - listitem [ref=e46]:
+            - link "Log Out" [ref=e47] [cursor=pointer]:
+              - /url: logout.htm
+      - generic [ref=e50]:
+        - heading "Accounts Overview" [level=1] [ref=e51]
+        - table [ref=e52]:
+          - rowgroup [ref=e53]:
+            - row "Account Balance* Available Amount" [ref=e54]:
+              - columnheader "Account" [ref=e55]
+              - columnheader "Balance*" [ref=e56]
+              - columnheader "Available Amount" [ref=e57]
+          - rowgroup [ref=e58]:
+            - row "15786 $215.50 $215.50" [ref=e59]:
+              - cell "15786" [ref=e60]:
+                - link "15786" [ref=e61] [cursor=pointer]:
+                  - /url: activity.htm?id=15786
+              - cell "$215.50" [ref=e62]
+              - cell "$215.50" [ref=e63]
+            - row "16008 -$200.00 $0.00" [ref=e64]:
+              - cell "16008" [ref=e65]:
+                - link "16008" [ref=e66] [cursor=pointer]:
+                  - /url: activity.htm?id=16008
+              - cell "-$200.00" [ref=e67]
+              - cell "$0.00" [ref=e68]
+            - row "16119 $100.00 $100.00" [ref=e69]:
+              - cell "16119" [ref=e70]:
+                - link "16119" [ref=e71] [cursor=pointer]:
+                  - /url: activity.htm?id=16119
+              - cell "$100.00" [ref=e72]
+              - cell "$100.00" [ref=e73]
+            - row "16452 $100.00 $100.00" [ref=e74]:
+              - cell "16452" [ref=e75]:
+                - link "16452" [ref=e76] [cursor=pointer]:
+                  - /url: activity.htm?id=16452
+              - cell "$100.00" [ref=e77]
+              - cell "$100.00" [ref=e78]
+            - row "16563 $100.00 $100.00" [ref=e79]:
+              - cell "16563" [ref=e80]:
+                - link "16563" [ref=e81] [cursor=pointer]:
+                  - /url: activity.htm?id=16563
+              - cell "$100.00" [ref=e82]
+              - cell "$100.00" [ref=e83]
+            - row "16896 $100.00 $100.00" [ref=e84]:
+              - cell "16896" [ref=e85]:
+                - link "16896" [ref=e86] [cursor=pointer]:
+                  - /url: activity.htm?id=16896
+              - cell "$100.00" [ref=e87]
+              - cell "$100.00" [ref=e88]
+            - row "17007 $100.00 $100.00" [ref=e89]:
+              - cell "17007" [ref=e90]:
+                - link "17007" [ref=e91] [cursor=pointer]:
+                  - /url: activity.htm?id=17007
+              - cell "$100.00" [ref=e92]
+              - cell "$100.00" [ref=e93]
+            - row "Total $515.50" [ref=e94]:
+              - cell "Total" [ref=e95]
+              - cell "$515.50" [ref=e96]
+              - cell [ref=e97]
+          - rowgroup [ref=e98]:
+            - row "*Balance includes deposits that may be subject to holds" [ref=e99]:
+              - cell "*Balance includes deposits that may be subject to holds" [ref=e100]
+  - generic [ref=e102]:
+    - list [ref=e103]:
+      - listitem [ref=e104]:
+        - link "Home" [ref=e105] [cursor=pointer]:
+          - /url: index.htm
+        - text: "|"
+      - listitem [ref=e106]:
+        - link "About Us" [ref=e107] [cursor=pointer]:
+          - /url: about.htm
+        - text: "|"
+      - listitem [ref=e108]:
+        - link "Services" [ref=e109] [cursor=pointer]:
+          - /url: services.htm
+        - text: "|"
+      - listitem [ref=e110]:
+        - link "Products" [ref=e111] [cursor=pointer]:
+          - /url: http://www.parasoft.com/jsp/products.jsp
+        - text: "|"
+      - listitem [ref=e112]:
+        - link "Locations" [ref=e113] [cursor=pointer]:
+          - /url: http://www.parasoft.com/jsp/pr/contacts.jsp
+        - text: "|"
+      - listitem [ref=e114]:
+        - link "Forum" [ref=e115] [cursor=pointer]:
+          - /url: http://forums.parasoft.com/
+        - text: "|"
+      - listitem [ref=e116]:
+        - link "Site Map" [ref=e117] [cursor=pointer]:
+          - /url: sitemap.htm
+        - text: "|"
+      - listitem [ref=e118]:
+        - link "Contact Us" [ref=e119] [cursor=pointer]:
+          - /url: contact.htm
+    - paragraph [ref=e120]: © Parasoft. All rights reserved.
+    - list [ref=e121]:
+      - listitem [ref=e122]: "Visit us at:"
+      - listitem [ref=e123]:
+        - link "www.parasoft.com" [ref=e124] [cursor=pointer]:
+          - /url: http://www.parasoft.com/
+```

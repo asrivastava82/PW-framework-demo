@@ -1,0 +1,4 @@
+info Navigating to the page: https://admin-demo.nopcommerce.com/
+info Typing text: admin@yourstore.com
+info Typing text: admin
+info Clicking element: getByRole('button', { name: 'Log in' })

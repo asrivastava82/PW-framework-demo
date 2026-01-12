@@ -1,0 +1,8 @@
+info Navigating to the page: https://parabank.parasoft.com/
+info Clicking element: getByRole('link', { name: 'Open New Account' })
+info Clicking element: getByRole('button', { name: 'Open New Account' })
+info Clicking element: getByRole('link', { name: 'Accounts Overview' })
+515.5
+The amount in various accounts is 415.5,100
+Matched!
+515.5

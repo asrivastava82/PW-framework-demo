@@ -1,0 +1,11 @@
+info Navigating to the page: https://parabank.parasoft.com/
+info Clicking element: getByRole('link', { name: 'Open New Account' })
+info Clicking element: getByRole('button', { name: 'Open New Account' })
+info Clicking element: getByRole('link', { name: 'Accounts Overview' })
+[
+  '13788', '15564',
+  '16230', '17562',
+  '17673', '20892',
+  '21336', '21669',
+  'Total'
+]

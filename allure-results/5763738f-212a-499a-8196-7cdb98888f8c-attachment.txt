@@ -1,0 +1,2 @@
+info Navigating to the page: https://admin-demo.nopcommerce.com/
+info Typing text: admin@yourstore.com

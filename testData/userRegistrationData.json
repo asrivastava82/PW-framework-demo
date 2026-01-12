@@ -1,0 +1,12 @@
+{
+  "fname": "FirstBank",
+  "lname": "LastBank",
+  "street": "123 Main Road",
+  "city": "New York",
+  "state": "NY",
+  "zipcode": 10151,
+  "ssn": 123456789,
+  "uname": "testbank",
+  "password": "parabank",
+  "repassword": "parabank"
+}

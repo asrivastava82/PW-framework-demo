@@ -1,0 +1,4 @@
+info Navigating to the page: https://parabank.parasoft.com/
+info Clicking element: getByRole('link', { name: 'Open New Account' })
+info Clicking element: getByRole('button', { name: 'Open New Account' })
+Account created: 15897

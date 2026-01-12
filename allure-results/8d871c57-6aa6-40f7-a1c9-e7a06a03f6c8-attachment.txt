@@ -1,0 +1,4 @@
+info Navigating to the page: https://parabank.parasoft.com/
+info Typing text: asrivastava82
+info Typing text: Lucknow
+info Clicking element: getByRole('button', { name: 'Log In' })
