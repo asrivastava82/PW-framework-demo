@@ -7,7 +7,8 @@
     "test_login": "cross-env $env:TEST_ENV='qa'; npx playwright test loginPage.spec.ts --project=chromium --headed",
     "test_openAccount": "cross-env $env:TEST_ENV='qa'; npx playwright test openNewAccount.spec.ts --project=chromium --headed",
     "test_accountOverview": "cross-env $env:TEST_ENV='qa'; npx playwright test accountsOverview.spec.ts --project=chromium --headed",
-    "test_registration": "npx cross-env SKIP_GLOBAL_SETUP=true npx playwright test tests/ui/userRegistration.spec.ts -g 'verify the User Regristration' --project=chromium --headed"
+    "test_registration": "npx cross-env SKIP_GLOBAL_SETUP=true npx playwright test tests/ui/userRegistration.spec.ts -g 'verify the User Regristration' --project=chromium --headed",
+    "test_project": "cross-env $env:TEST_ENV='qa'; npx playwright test /flow/account-flow.runner.spec.ts"
   },
   "keywords": [],
   "author": "",
