@@ -9,6 +9,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+
 steps:
 - task: NodeTool@0
   inputs:
@@ -21,7 +22,7 @@ steps:
 - script: npx playwright install --with-deps
   displayName: "Install Playwright Browsers"
 
-- script: $env:SECRET_KEY=${env:SECRET_KEY_VAR} ; npm run test_project --project=chromium
+- script: $env:SECRET_KEY=${env:SECRET_KEY_VAR} ; npm run ${env:SCRIPT_KEY_VAR} --project=chromium
   displayName: "Test Execution"
 
 
