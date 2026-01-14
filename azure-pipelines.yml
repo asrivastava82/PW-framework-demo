@@ -21,8 +21,8 @@ steps:
 - script: npm playwright install --with-deps
   displayName: "Install Playwright Browsers"
 
-- script: npm playwright test
-  displayName: "Start Execution"
+- script: $env:SECRET_KEY=$(SECRET_KEY_VAR); npm run test_project --project=chromium
+  displayName: "Test Execution"
 
 
 
