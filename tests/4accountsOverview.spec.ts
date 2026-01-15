@@ -1,7 +1,7 @@
 import { expect, test } from "../Fixtures/hooks-fixtures";
 import { readFile } from "../utlis/helpers";
 import path from "path";
-const acctPath = path.join(__dirname, "../../testData/acctNumber.json");
+const acctPath = path.join(__dirname, "../testData/acctNumber.json");
 
 test.describe.serial("Account Flow", () => {
   test("verify that Accounts Overview page is displayed", async ({

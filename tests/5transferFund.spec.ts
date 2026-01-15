@@ -1,7 +1,7 @@
 import { expect, test } from "../Fixtures/api-fixture";
 import { readFile, getSessionId } from "../utlis/helpers";
 import path from "path";
-const acctPath = path.join(__dirname, "../../testData/acctNumber.json");
+const acctPath = path.join(__dirname, "../testData/acctNumber.json");
 
 const sessionId = getSessionId();
 

@@ -14,6 +14,7 @@ test("Global Setup", async ({ page, loginPage, homePage, encDec }) => {
   const decryptedUname = encDec.decryptData(process.env.APP_USERNAME!);
   const decryptedPwd = encDec.decryptData(process.env.APP_PASSWORD!);
   await loginPage.navigatetoApp(process.env.BASE_URL!);
+
   await loginPage.loginToApp(decryptedUname, decryptedPwd);
   await page.waitForURL("**/overview.htm");
   await page.context().storageState({ path: authFile });
