@@ -1,6 +1,4 @@
 import { expect, test } from "../Fixtures/hooks-fixtures";
-//import EncryptDecrypt from "../../utlis/encrypt-decrypt";
-//const encDec = new EncryptDecrypt();
 
 test.describe.serial("Account Flow", () => {
   test.use({
@@ -17,7 +15,7 @@ test.describe.serial("Account Flow", () => {
     await loginPage.navigatetoApp("https://parabank.parasoft.com/");
     await loginPage.loginToApp("testbanking", decryptedPwd);
     await expect(loginPage.errorMsg).toHaveText(
-      "The username and password could not be verified."
+      "The username and password could not be verified.",
     );
   });
 
@@ -29,7 +27,7 @@ test.describe.serial("Account Flow", () => {
     await loginPage.navigatetoApp("https://parabank.parasoft.com/");
     await loginPage.loginToApp(decryptedUname, "parabanking");
     await expect(loginPage.errorMsg).toHaveText(
-      "The username and password could not be verified."
+      "The username and password could not be verified.",
     );
   });
 
@@ -40,7 +38,7 @@ test.describe.serial("Account Flow", () => {
     await loginPage.navigatetoApp("https://parabank.parasoft.com/");
     await loginPage.loginToApp("", "");
     await expect(loginPage.errorMsgBlank).toHaveText(
-      "Please enter a username and password."
+      "Please enter a username and password.",
     );
   });
 });
