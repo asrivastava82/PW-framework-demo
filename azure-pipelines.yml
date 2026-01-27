@@ -4,26 +4,25 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main
 
 pool:
   vmImage: ubuntu-latest
 
-
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSource: spec
-    versionSpec: '20.x'
+  - task: NodeTool@0
+    inputs:
+      versionSource: spec
+      versionSpec: "20.x"
 
-- script: npm ci
-  displayName: "Install Playwright Deps"
+  - script: npm ci
+    displayName: "Install Playwright Deps"
 
-- script: npx playwright install --with-deps
-  displayName: "Install Playwright Browsers"
+  - script: npm playwright install --with-deps
+    displayName: "Install Playwright Browsers"
 
-- script: $env:SECRET_KEY=${env:SECRET_KEY_VAR} ; npm run ${env:SCRIPT_KEY_VAR} --project=chromium
-  displayName: "Test Execution"
+  - script: npx playwright test
+    displayName: "Start Execution"
 
-
-
+  - script: $env:SECRET_KEY=${env:SECRET_KEY_VAR} ; npm run ${env:SCRIPT_KEY_VAR} --project=chromium
+    displayName: "Test Execution"
