@@ -20,6 +20,7 @@ steps:
 
   - script: npx playwright codegen --save-storage=auth/auth.json https://parabank.parasoft.com/
     displayName: "Generate Auth File"
+    condition: failed()
 
   - script: SECRET_KEY=$(SECRET_KEY_VAR) npm run $(SCRIPT_KEY_VAR) --project=chromium
     displayName: "Test Execution"
