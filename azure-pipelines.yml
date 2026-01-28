@@ -21,12 +21,12 @@ steps:
   - script: npx playwright install --with-deps
     displayName: "Install Playwright Browsers"
 
-  - script: $env:SECRET_KEY=${env:SECRET_KEY_VAR} ; npm run ${env:SCRIPT_KEY_VAR} --project=chromium
+  - script: SECRET_KEY=$(SECRET_KEY_VAR) npm run $(SCRIPT_KEY_VAR) --project=chromium
     displayName: "Test Execution"
 
   - task: PublishPipelineArtifact@1
     inputs:
-     targetPath: 'playwright-report'
-     artifact: 'Playwright HTML Report'
-     publishLocation: 'pipeline'
+      targetPath: 'playwright-report'
+      artifact: 'Playwright HTML Report'
+      publishLocation: 'pipeline'
     condition: always()
