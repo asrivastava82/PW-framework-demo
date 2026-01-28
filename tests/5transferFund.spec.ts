@@ -3,13 +3,12 @@ import { readFile, getSessionId } from "../utlis/helpers";
 import path from "path";
 const acctPath = path.join(__dirname, "../testData/acctNumber.json");
 
-const sessionId = getSessionId();
-
 test.describe.serial("Account Flow", () => {
   test("Verify that funds are transferred successfully", async ({
     api,
     loginPage,
   }) => {
+    const sessionId = getSessionId();
     await loginPage.navigatetoApp(process.env.BASE_URL!);
     const transferFund = await api
       .url(process.env.BASE_URL!)

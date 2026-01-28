@@ -17,11 +17,17 @@ function writeFile(filePath: string, data: string) {
 }
 
 function getSessionId(): string | undefined {
-  const authPath = path.join(__dirname, "../auth/auth.json");
+  const authPath = path.resolve(process.cwd(), "auth/auth.json");
+
+  if (!fs.existsSync(authPath)) {
+    console.warn("auth.json not found. Skipping session lookup.");
+    return undefined;
+  }
+
   const storageState = JSON.parse(fs.readFileSync(authPath, "utf-8"));
 
   const sessionCookie = storageState.cookies.find(
-    (cookie: any) => cookie.name === "JSESSIONID"
+    (cookie: any) => cookie.name === "JSESSIONID",
   );
 
   return sessionCookie?.value;
