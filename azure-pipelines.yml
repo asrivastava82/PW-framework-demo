@@ -23,3 +23,10 @@ steps:
 
   - script: $env:SECRET_KEY=${env:SECRET_KEY_VAR} ; npm run ${env:SCRIPT_KEY_VAR} --project=chromium
     displayName: "Test Execution"
+
+  - task: PublishPipelineArtifact@1
+    inputs:
+     targetPath: 'playwright-report'
+     artifact: 'Playwright HTML Report'
+     publishLocation: 'pipeline'
+    condition: always()
