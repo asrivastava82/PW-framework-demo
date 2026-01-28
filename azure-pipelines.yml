@@ -17,28 +17,16 @@ steps:
   - script: npx playwright install --with-deps
     displayName: "Install Playwright Browsers"
 
-<<<<<<< HEAD
+
   - script: npx playwright codegen --save-storage=auth/auth.json https://parabank.parasoft.com/
     displayName: "Generate Auth File"
 
-  - script: npm run $(SCRIPT_KEY_VAR) --project=chromium
-=======
-
   - script: SECRET_KEY=$(SECRET_KEY_VAR) npm run $(SCRIPT_KEY_VAR) --project=chromium
->>>>>>> 2bdf9033f63a799dce35ddb2e1e17cd37803f273
     displayName: "Test Execution"
-    env:
-      SECRET_KEY: $(SECRET_KEY_VAR)
 
   - task: PublishPipelineArtifact@1
     inputs:
-<<<<<<< HEAD
-      targetPath: "playwright-report"
-      artifact: "Playwright HTML Report"
-      publishLocation: "pipeline"
-=======
       targetPath: 'playwright-report'
       artifact: 'Playwright HTML Report'
       publishLocation: 'pipeline'
->>>>>>> 2bdf9033f63a799dce35ddb2e1e17cd37803f273
     condition: always()
