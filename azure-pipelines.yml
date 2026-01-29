@@ -17,10 +17,10 @@ steps:
   - script: npx playwright install --with-deps
     displayName: "Install Playwright Browsers"
 
-  - script: xvfb-run -a npm run $(SCRIPT_KEY_VAR) --project=chromium
+  - script: xvfb-run -a npm run ${env:SCRIPT_KEY_VAR} --project=chromium
     displayName: "Test Execution"
     env:
-      SECRET_KEY: $(SECRET_KEY_VAR)
+      SECRET_KEY: ${env:SECRET_KEY_VAR}
 
   - task: PublishPipelineArtifact@1
     inputs:
