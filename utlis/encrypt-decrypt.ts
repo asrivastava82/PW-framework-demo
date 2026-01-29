@@ -4,9 +4,11 @@ export class EncryptDecrypt {
   private secretKey: string;
 
   constructor() {
-    this.secretKey = process.env.SECRET_KEY
-      ? process.env.SECRET_KEY
-      : "Please enter valid key";
+    this.secretKey = process.env.SECRET_KEY || "";
+
+    if (!this.secretKey) {
+      throw new Error("SECRET_KEY environment variable is not set");
+    }
   }
 
   encryptData(data: string) {
@@ -17,7 +19,7 @@ export class EncryptDecrypt {
   decryptData(encData: string) {
     const decryptedData = CryptoJS.AES.decrypt(
       encData,
-      this.secretKey
+      this.secretKey,
     ).toString(CryptoJS.enc.Utf8);
     return decryptedData;
   }
