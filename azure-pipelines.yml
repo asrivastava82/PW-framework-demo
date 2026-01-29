@@ -21,10 +21,9 @@ steps:
     displayName: "Test Execution"
     env:
       SECRET_KEY: ${env:SECRET_KEY_VAR}
-
+  
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: "playwright-report"
-      artifact: "Playwright HTML Report"
-      publishLocation: "pipeline"
-    condition: always()
+      targetPath: 'playwright-report'
+      artifact: 'Playwright HTML Report'
+      publishLocation: 'pipeline'
