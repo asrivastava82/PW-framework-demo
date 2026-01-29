@@ -17,15 +17,14 @@ steps:
   - script: npx playwright install --with-deps
     displayName: "Install Playwright Browsers"
 
-  - script: npm run $(SCRIPT_KEY_VAR) --project=chromium
+  - script: xvfb-run -a npm run $(SCRIPT_KEY_VAR) --project=chromium
     displayName: "Test Execution"
     env:
       SECRET_KEY: $(SECRET_KEY_VAR)
-      PLAYWRIGHT_HEADLESS: "1"
 
   - task: PublishPipelineArtifact@1
     inputs:
-      targetPath: 'playwright-report'
-      artifact: 'Playwright HTML Report'
-      publishLocation: 'pipeline'
+      targetPath: "playwright-report"
+      artifact: "Playwright HTML Report"
+      publishLocation: "pipeline"
     condition: always()
