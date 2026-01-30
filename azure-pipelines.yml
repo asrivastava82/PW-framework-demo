@@ -22,9 +22,6 @@ steps:
     env:
       SECRET_KEY: ${env:SECRET_KEY_VAR}
 
-  - script: mkdir -p playwright-report
-    displayName: "Ensure report folder exists"
-
   - task: PublishPipelineArtifact@1
     inputs:
       targetPath: "playwright-report"
