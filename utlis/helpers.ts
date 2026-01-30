@@ -19,10 +19,10 @@ function writeFile(filePath: string, data: string) {
 function getSessionId(): string | undefined {
   const authPath = path.resolve(process.cwd(), "auth/auth.json");
 
-  if (!fs.existsSync(authPath)) {
-    console.warn("auth.json not found. Skipping session lookup.");
-    return undefined;
-  }
+  // if (!fs.existsSync(authPath)) {
+  //   console.warn("auth.json not found. Skipping session lookup.");
+  //   return undefined;
+  // }
 
   const storageState = JSON.parse(fs.readFileSync(authPath, "utf-8"));
 
