@@ -17,14 +17,16 @@ steps:
   - script: npx playwright install --with-deps
     displayName: "Install Playwright Browsers"
 
-  - script: |
-      cd tests
-      xvfb-run -a npm run ${env:SCRIPT_KEY_VAR} --project=chromium
+  - script: xvfb-run -a npm run ${env:SCRIPT_KEY_VAR} --reporter=html --project=chromium
     displayName: "Test Execution"
     env:
       SECRET_KEY: ${env:SECRET_KEY_VAR}
 
+  - script: mkdir -p playwright-report
+    displayName: "Ensure report folder exists"
+
   - task: PublishPipelineArtifact@1
+    condition: always()
     inputs:
       targetPath: "playwright-report"
       artifact: "Playwright HTML Report"
