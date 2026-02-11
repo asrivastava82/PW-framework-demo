@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test_login": "cross-env $env:TEST_ENV='qa'; npx playwright test 2loginPage.spec.ts --project=chromium --headed",
-    "test_openAccount": "cross-env $env:TEST_ENV='qa'; npx playwright test 3openNewAccount.spec.ts --project=chromium --headed",
-    "test_accountOverview": "cross-env $env:TEST_ENV='qa'; npx playwright test 4accountsOverview.spec.ts --project=chromium --headed",
-    "test_registration": "npx cross-env SKIP_GLOBAL_SETUP=true npx playwright test tests/ui/1userRegistration.spec.ts -g 'verify the User Regristration' --project=chromium --headed",
-    "test_project": "cross-env $env:TEST_ENV='qa'; npx playwright test --project=chromium --headed"
+    "test_login": "cross-env $env:TEST_ENV='qa'; npx playwright test loginPage.spec.ts --project=chromium --headed",
+    "test_openAccount": "cross-env $env:TEST_ENV='qa'; npx playwright test openNewAccount.spec.ts --project=chromium --headed",
+    "test_accountOverview": "cross-env $env:TEST_ENV='qa'; npx playwright test accountsOverview.spec.ts --project=chromium --headed",
+    "test_registration": "npx cross-env SKIP_GLOBAL_SETUP=true npx playwright test tests/ui/userRegistration.spec.ts -g 'verify the User Regristration' --project=chromium --headed",
+    "test_transferFund": "cross-env $env:TEST_ENV='qa'; npx playwright test transferFund.spec.ts --project=chromium --headed",
+    "test_project": "cross-env $env:TEST_ENV='qa'; npm run test_registration; npm run test_login; npm run test_openAccount; npm run test_accountOverview; npm run test_transferFund"
   },
   "keywords": [],
   "author": "",
