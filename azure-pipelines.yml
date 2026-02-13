@@ -20,7 +20,7 @@ steps:
   - script: xvfb-run -a npm run ${env:SCRIPT_KEY_VAR} --reporter=html --project=chromium
     displayName: "Test Execution"
     env:
-      SECRET_KEY: ${env:SECRET_KEY_VAR}
+      SECRET_KEY: ${env:SECRET_KEY_VAR1}
 
   - script: mkdir -p playwright-report
     displayName: "Ensure report folder exists"
