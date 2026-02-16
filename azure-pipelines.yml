@@ -17,11 +17,13 @@ steps:
         latest
 
   # Run Container
-  - script: |
-      docker run --rm \
-        -v $(System.DefaultWorkingDirectory)/playwright-report:/app/playwright-report \
-        los-automation:latest
-    displayName: "Run Tests in Docker"
+ - script: |
+    docker run --rm \
+      -e SECRET_KEY=$(SECRET_KEY) \
+      -v $(System.DefaultWorkingDirectory)/playwright-report:/app/playwright-report \
+      los-automation:latest
+  displayName: "Run Tests in Docker"
+
 
   # Publish Report
   - task: PublishPipelineArtifact@1
