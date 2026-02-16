@@ -6,16 +6,17 @@ pool:
 
 steps:
 
-  # Build Docker Image
+  # Build Image
   - task: Docker@2
     displayName: "Build Docker Image"
     inputs:
       command: build
+      repository: los-automation
       dockerfile: '**/Dockerfile'
       tags: |
-        los-automation:latest
+        latest
 
-  # Run Tests Inside Container
+  # Run Container
   - script: |
       docker run --rm \
         -v $(System.DefaultWorkingDirectory)/playwright-report:/app/playwright-report \
