@@ -1,4 +1,3 @@
-# ...existing code...
 trigger:
   - main
 
@@ -6,25 +5,24 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: NodeTool@0
+
+  # Build Docker Image
+  - task: Docker@2
+    displayName: "Build Docker Image"
     inputs:
-      versionSource: spec
-      versionSpec: "20.x"
+      command: build
+      dockerfile: '**/Dockerfile'
+      tags: |
+        los-automation:latest
 
-  - script: npm ci
-    displayName: "Install Playwright Deps"
+  # Run Tests Inside Container
+  - script: |
+      docker run --rm \
+        -v $(System.DefaultWorkingDirectory)/playwright-report:/app/playwright-report \
+        los-automation:latest
+    displayName: "Run Tests in Docker"
 
-  - script: npx playwright install --with-deps
-    displayName: "Install Playwright Browsers"
-
-  - script: xvfb-run -a npm run ${env:SCRIPT_KEY_VAR} --reporter=html --project=chromium
-    displayName: "Test Execution"
-    env:
-      SECRET_KEY: ${env:SECRET_KEY_VAR1}
-
-  - script: mkdir -p playwright-report
-    displayName: "Ensure report folder exists"
-
+  # Publish Report
   - task: PublishPipelineArtifact@1
     condition: always()
     inputs:
